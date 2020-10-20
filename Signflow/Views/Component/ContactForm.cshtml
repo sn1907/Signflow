@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "ContactForm";
+    Layout = "~/Views/Shared/_Signflow.cshtml";
+}
+
+    <meta name="description" content="HTML5/CSS3 template components for Framework Y and business industries, based on Framework Y.">
+ 
+<body>
+   
+    <div class="header-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="title-base text-left">
+                        <h1>Contact form</h1>
+                        <p>This template come with lot of innovative features and an awesome and extensive documentation.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <ol class="breadcrumb b white">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Features</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-empty section-item text-center">
+        <div class="container content">
+            <h5 class="text-center">CONTACT FORM</h5>
+            <hr class="space m" />
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Name</p>
+                                <input id="name" name="name" placeholder="name" type="text" class="form-control form-value" required>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Email</p>
+                                <input id="email" name="email" placeholder="email" type="email" class="form-control form-value" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <hr class="space xs" />
+                                <p>Phone</p>
+                                <input id="phone" name="phone" placeholder="phone" type="text" class="form-control form-value">
+                                <hr class="space xs" />
+                                <p>Messagge</p>
+                                <textarea id="messagge" name="messagge" class="form-control form-value" required></textarea>
+                                <hr class="space s" />
+                                <button class="btn-sm btn" type="submit">Send messagge</button>
+                            </div>
+                        </div>
+                        <div class="success-box">
+                            <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
+                        </div>
+                        <div class="error-box">
+                            <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+            <hr class="space s" />
+            <hr />
+            <hr class="space s" />
+            <h5>CONTACT FORM WITH DATE PICKER</h5>
+            <hr class="space m" />
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Check-in</p>
+                                <input name="checkin" id="checkin" type="text" data-toggle="datepicker" class="form-control form-value" placeholder="Check-in" required>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Check-out</p>
+                                <input name="checkout" id="checkout" type="text" data-toggle="datepicker" class="form-control form-value" placeholder="Check-out" required>
+                            </div>
+                            <hr class="space s" />
+                            <div class="col-md-4">
+                                <p>Nights</p>
+                                <select name="nights" id="nights" class="form-control form-value">
+                                    <option value="0">0</option>
+                                    <option value="1" selected="">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <p>Adults</p>
+                                <select name="adults" id="adults" class="form-control form-value" required>
+                                    <option value="">--</option>
+                                    <option value="1" selected="">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <p>Childrens</p>
+                                <select name="childrens" id="childrens" class="form-control form-value">
+                                    <option value="0">0</option>
+                                    <option value="1" selected="">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <hr class="space s" />
+                            <div class="col-md-12 text-center">
+                                <button class="btn-sm btn" type="submit">Check Availability</button>
+                            </div>
+                        </div>
+                        <div class="success-box">
+                            <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
+                        </div>
+                        <div class="error-box">
+                            <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-empty text-center section-doc">
+        <div class="container content">
+            <h4 class="text-normal">Documentation</h4>
+            <p>This template is built with HTWF and more variants<br /> are available, check the official documentation for more details.</p>
+            <hr class="space xs" />
+            <a href="http://html.framework-y.com/components/contact-form/" target="_blank" class="circle-button btn btn-sm">Go to documentation</a>
+        </div>
+    </div>
+    
+</body>
+
+<!-- Mirrored from templates.framework-y.com/signflow/pages/features/components/php-contact-form.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 10 Oct 2020 09:11:38 GMT -->
+
+
+

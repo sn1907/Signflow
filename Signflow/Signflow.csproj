@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEC44830-A0A3-48C8-8F91-FB1C41D949FE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Signflow</RootNamespace>
+    <AssemblyName>Signflow</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44316</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComponentController.cs" />
+    <Compile Include="Controllers\HeaderController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortController.cs" />
+    <Compile Include="Controllers\TitlesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Root\features\components\buttons.html" />
+    <Content Include="Areas\Root\features\components\content-box.html" />
+    <Content Include="Areas\Root\features\components\counters-countdown.html" />
+    <Content Include="Areas\Root\features\components\icons.html" />
+    <Content Include="Areas\Root\features\components\image-boxes-advanced.html" />
+    <Content Include="Areas\Root\features\components\image-boxes.html" />
+    <Content Include="Areas\Root\features\components\lists.html" />
+    <Content Include="Areas\Root\features\components\maps.html" />
+    <Content Include="Areas\Root\features\components\php-contact-form.html" />
+    <Content Include="Areas\Root\features\components\progress-bars.html" />
+    <Content Include="Areas\Root\features\components\social-media.html" />
+    <Content Include="Areas\Root\features\components\tables.html" />
+    <Content Include="Areas\Root\features\components\timeline.html" />
+    <Content Include="Areas\Root\features\components\typography.html" />
+    <Content Include="Areas\Root\features\containers\accordions.html" />
+    <Content Include="Areas\Root\features\containers\lightbox.html" />
+    <Content Include="Areas\Root\features\containers\list-grid.html" />
+    <Content Include="Areas\Root\features\containers\list-masonry.html" />
+    <Content Include="Areas\Root\features\containers\scroll-box-collapse.html" />
+    <Content Include="Areas\Root\features\containers\section-animations-parallax.html" />
+    <Content Include="Areas\Root\features\containers\section-animations.html" />
+    <Content Include="Areas\Root\features\containers\section-background-image-parallax.html" />
+    <Content Include="Areas\Root\features\containers\section-background-image.html" />
+    <Content Include="Areas\Root\features\containers\section-background-video.html" />
+    <Content Include="Areas\Root\features\containers\section-slider.html" />
+    <Content Include="Areas\Root\features\containers\sliders.html" />
+    <Content Include="Areas\Root\features\containers\tabs.html" />
+    <Content Include="Areas\Root\features\footers\base.html" />
+    <Content Include="Areas\Root\features\footers\minimal.html" />
+    <Content Include="Areas\Root\features\footers\parallax.html" />
+    <Content Include="Areas\Root\features\menus\big-logo.html" />
+    <Content Include="Areas\Root\features\menus\classic-transparent.html" />
+    <Content Include="Areas\Root\features\menus\classic.html" />
+    <Content Include="Areas\Root\features\menus\icons-top.html" />
+    <Content Include="Areas\Root\features\menus\icons.html" />
+    <Content Include="Areas\Root\features\menus\middle-box.html" />
+    <Content Include="Areas\Root\features\menus\middle-logo-top.html" />
+    <Content Include="Areas\Root\features\menus\middle-logo.html" />
+    <Content Include="Areas\Root\features\menus\side-lateral.html" />
+    <Content Include="Areas\Root\features\menus\side-simple.html" />
+    <Content Include="Areas\Root\features\menus\side.html" />
+    <Content Include="Areas\Root\features\menus\subline.html" />
+    <Content Include="Areas\Root\features\menus\subtitle.html" />
+    <Content Include="Areas\Root\features\titles\animation-parallax.html" />
+    <Content Include="Areas\Root\features\titles\animation.html" />
+    <Content Include="Areas\Root\features\titles\base-1.html" />
+    <Content Include="Areas\Root\features\titles\base-2.html" />
+    <Content Include="Areas\Root\features\titles\image-fullscreen-parallax.html" />
+    <Content Include="Areas\Root\features\titles\image-fullscreen.html" />
+    <Content Include="Areas\Root\features\titles\image-parallax-ken-burn.html" />
+    <Content Include="Areas\Root\features\titles\image-parallax.html" />
+    <Content Include="Areas\Root\features\titles\image.html" />
+    <Content Include="Areas\Root\features\titles\slider-fullscreen-parallax.html" />
+    <Content Include="Areas\Root\features\titles\slider-fullscreen.html" />
+    <Content Include="Areas\Root\features\titles\slider-parallax.html" />
+    <Content Include="Areas\Root\features\titles\slider.html" />
+    <Content Include="Areas\Root\features\titles\video-fullscreen-parallax.html" />
+    <Content Include="Areas\Root\features\titles\video-fullscreen.html" />
+    <Content Include="Areas\Root\features\titles\video-mp4.html" />
+    <Content Include="Areas\Root\features\titles\video-parallax.html" />
+    <Content Include="Areas\Root\features\titles\video-youtube.html" />
+    <Content Include="Areas\Root\HTWF\css\animations.css" />
+    <Content Include="Areas\Root\HTWF\css\components.css" />
+    <Content Include="Areas\Root\HTWF\css\content-box.css" />
+    <Content Include="Areas\Root\HTWF\css\image-box.css" />
+    <Content Include="Areas\Root\HTWF\images\assets\bg-gradient.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\clouds_1.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\clouds_2.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\dotted-line.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\fog_1.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\fog_2.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\gradient-line-dark.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\gradient-line.png" />
+    <Content Include="Areas\Root\HTWF\images\assets\loader.gif" />
+    <Content Include="Areas\Root\HTWF\images\overlay\carbonio-white.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\carbonio.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\dotted-white.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\dotted.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\line-45-white.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\line-45.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\points.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\squares.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\tile.png" />
+    <Content Include="Areas\Root\HTWF\images\overlay\tv.gif" />
+    <Content Include="Areas\Root\HTWF\scripts\bootstrap\css\bootstrap.css" />
+    <Content Include="Areas\Root\HTWF\scripts\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\bootstrap\js\bootstrap.popover.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\flexslider.css" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\fonts\flexslider-icon.svg" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\jquery.flexslider-min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\font-awesome\css\font-awesome.css" />
+    <Content Include="Areas\Root\HTWF\scripts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Areas\Root\HTWF\scripts\google.maps.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\imagesloaded.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\isotope.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.bootgrid.css" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.bootgrid.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.flipster.min.css" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.flipster.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.fullPage.css" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.fullPage.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.progress-counter.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.slimscroll.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.spritely.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.tab-accordion.js" />
+    <Content Include="Areas\Root\HTWF\scripts\jquery.twbsPagination.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\magnific-popup.css" />
+    <Content Include="Areas\Root\HTWF\scripts\metis.menu.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\parallax.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\php\contact-form.css" />
+    <Content Include="Areas\Root\HTWF\scripts\php\contact-form.js" />
+    <Content Include="Areas\Root\HTWF\scripts\php\datepicker.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\script.js" />
+    <Content Include="Areas\Root\HTWF\scripts\social.stream.css" />
+    <Content Include="Areas\Root\HTWF\scripts\social.stream.min.js" />
+    <Content Include="Areas\Root\HTWF\style.css" />
+    <Content Include="Areas\Root\images\bg-10.jpg" />
+    <Content Include="Areas\Root\images\bg-11.png" />
+    <Content Include="Areas\Root\images\bg-12.png" />
+    <Content Include="Areas\Root\images\bg-13.png" />
+    <Content Include="Areas\Root\images\bg-14.png" />
+    <Content Include="Areas\Root\images\bg-15.png" />
+    <Content Include="Areas\Root\images\bg-16.png" />
+    <Content Include="Areas\Root\images\bg-17.png" />
+    <Content Include="Areas\Root\images\bg-18.png" />
+    <Content Include="Areas\Root\images\bg-2.png" />
+    <Content Include="Areas\Root\images\bg-20.png" />
+    <Content Include="Areas\Root\images\bg-22.png" />
+    <Content Include="Areas\Root\images\bg-23.jpg" />
+    <Content Include="Areas\Root\images\bg-24.png" />
+    <Content Include="Areas\Root\images\bg-3.png" />
+    <Content Include="Areas\Root\images\bg-6.png" />
+    <Content Include="Areas\Root\images\bg-8.jpg" />
+    <Content Include="Areas\Root\images\bg-9.jpg" />
+    <Content Include="Areas\Root\images\bg-gradient-2.png" />
+    <Content Include="Areas\Root\images\bg-gradient-3.png" />
+    <Content Include="Areas\Root\images\bg-gradient-4.png" />
+    <Content Include="Areas\Root\images\bg-gradient.png" />
+    <Content Include="Areas\Root\images\bg-img-1.png" />
+    <Content Include="Areas\Root\images\bg-img-10.png" />
+    <Content Include="Areas\Root\images\bg-img-11.jpg" />
+    <Content Include="Areas\Root\images\bg-img-12.jpg" />
+    <Content Include="Areas\Root\images\bg-img-13.jpg" />
+    <Content Include="Areas\Root\images\bg-img-3.png" />
+    <Content Include="Areas\Root\images\bg-img-4.jpg" />
+    <Content Include="Areas\Root\images\bg-img-6.png" />
+    <Content Include="Areas\Root\images\bg-img-8.png" />
+    <Content Include="Areas\Root\images\bg-img-9.png" />
+    <Content Include="Areas\Root\images\bg-title.png" />
+    <Content Include="Areas\Root\images\box-1.png" />
+    <Content Include="Areas\Root\images\box-2.png" />
+    <Content Include="Areas\Root\images\box-3.png" />
+    <Content Include="Areas\Root\images\box-4.png" />
+    <Content Include="Areas\Root\images\box-5.png" />
+    <Content Include="Areas\Root\images\box-6.png" />
+    <Content Include="Areas\Root\images\box-7.png" />
+    <Content Include="Areas\Root\images\display-1.jpg" />
+    <Content Include="Areas\Root\images\en.png" />
+    <Content Include="Areas\Root\images\favicon.png" />
+    <Content Include="Areas\Root\images\gallery\image-1.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-10.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-11.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-12.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-13.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-14.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-17.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-2.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-3.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-4.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-5.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-6.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-7.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-8.jpg" />
+    <Content Include="Areas\Root\images\gallery\image-9.jpg" />
+    <Content Include="Areas\Root\images\gallery\large-1.jpg" />
+    <Content Include="Areas\Root\images\gallery\large-2.jpg" />
+    <Content Include="Areas\Root\images\gallery\large-3.jpg" />
+    <Content Include="Areas\Root\images\gallery\square-1.jpg" />
+    <Content Include="Areas\Root\images\gallery\square-2.jpg" />
+    <Content Include="Areas\Root\images\gallery\square-3.jpg" />
+    <Content Include="Areas\Root\images\gallery\square-4.jpg" />
+    <Content Include="Areas\Root\images\gallery\square-5.jpg" />
+    <Content Include="Areas\Root\images\hd-1.jpg" />
+    <Content Include="Areas\Root\images\hd-2.jpg" />
+    <Content Include="Areas\Root\images\hd-3.jpg" />
+    <Content Include="Areas\Root\images\hd-4.jpg" />
+    <Content Include="Areas\Root\images\hd-5.jpg" />
+    <Content Include="Areas\Root\images\hd-6.jpg" />
+    <Content Include="Areas\Root\images\hd-7.jpg" />
+    <Content Include="Areas\Root\images\hd-8.jpg" />
+    <Content Include="Areas\Root\images\home\header-big-logo.png" />
+    <Content Include="Areas\Root\images\home\header-classic.png" />
+    <Content Include="Areas\Root\images\home\header-icons-top.png" />
+    <Content Include="Areas\Root\images\home\header-icons.png" />
+    <Content Include="Areas\Root\images\home\header-middle-box.png" />
+    <Content Include="Areas\Root\images\home\header-middle-logo.png" />
+    <Content Include="Areas\Root\images\home\header-side-hidden.png" />
+    <Content Include="Areas\Root\images\home\header-side.png" />
+    <Content Include="Areas\Root\images\home\header-subline.png" />
+    <Content Include="Areas\Root\images\home\header-subtitle.png" />
+    <Content Include="Areas\Root\images\home\header-top-logo.png" />
+    <Content Include="Areas\Root\images\home\header-transparent.png" />
+    <Content Include="Areas\Root\images\image-1.jpg" />
+    <Content Include="Areas\Root\images\image-2.jpg" />
+    <Content Include="Areas\Root\images\image-3.jpg" />
+    <Content Include="Areas\Root\images\image-4.jpg" />
+    <Content Include="Areas\Root\images\image-6.jpg" />
+    <Content Include="Areas\Root\images\intro\home-application.jpg" />
+    <Content Include="Areas\Root\images\intro\home-business.jpg" />
+    <Content Include="Areas\Root\images\intro\home-cooworking.jpg" />
+    <Content Include="Areas\Root\images\intro\home-freelancer.jpg" />
+    <Content Include="Areas\Root\images\intro\home-fullpage.jpg" />
+    <Content Include="Areas\Root\images\intro\home-intro.jpg" />
+    <Content Include="Areas\Root\images\intro\home-main.jpg" />
+    <Content Include="Areas\Root\images\intro\home-mobile.jpg" />
+    <Content Include="Areas\Root\images\intro\home-video.jpg" />
+    <Content Include="Areas\Root\images\it.png" />
+    <Content Include="Areas\Root\images\line-1.png" />
+    <Content Include="Areas\Root\images\line-2.png" />
+    <Content Include="Areas\Root\images\logo-badge.png" />
+    <Content Include="Areas\Root\images\logo-black.png" />
+    <Content Include="Areas\Root\images\logo-htwf.png" />
+    <Content Include="Areas\Root\images\logo-margins-2.png" />
+    <Content Include="Areas\Root\images\logo-margins-3.png" />
+    <Content Include="Areas\Root\images\logo-margins.png" />
+    <Content Include="Areas\Root\images\logo-mini.png" />
+    <Content Include="Areas\Root\images\logo-retina-black.png" />
+    <Content Include="Areas\Root\images\logo-retina.png" />
+    <Content Include="Areas\Root\images\logo.png" />
+    <Content Include="Areas\Root\images\logos\logo_1.png" />
+    <Content Include="Areas\Root\images\logos\logo_2.png" />
+    <Content Include="Areas\Root\images\logos\logo_3.png" />
+    <Content Include="Areas\Root\images\logos\logo_4.png" />
+    <Content Include="Areas\Root\images\logos\logo_5.png" />
+    <Content Include="Areas\Root\images\logos\logo_6.png" />
+    <Content Include="Areas\Root\images\logos\logo_7.png" />
+    <Content Include="Areas\Root\images\logos\logo_8.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_1.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_2.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_3.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_4.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_5.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_6.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_7.png" />
+    <Content Include="Areas\Root\images\logos\white\logo_8.png" />
+    <Content Include="Areas\Root\images\long-1.jpg" />
+    <Content Include="Areas\Root\images\long-2.jpg" />
+    <Content Include="Areas\Root\images\mk-1.png" />
+    <Content Include="Areas\Root\images\mk-10.png" />
+    <Content Include="Areas\Root\images\mk-11.png" />
+    <Content Include="Areas\Root\images\mk-12.png" />
+    <Content Include="Areas\Root\images\mk-13.png" />
+    <Content Include="Areas\Root\images\mk-14.png" />
+    <Content Include="Areas\Root\images\mk-15.png" />
+    <Content Include="Areas\Root\images\mk-17.png" />
+    <Content Include="Areas\Root\images\mk-2.png" />
+    <Content Include="Areas\Root\images\mk-3.png" />
+    <Content Include="Areas\Root\images\mk-4.png" />
+    <Content Include="Areas\Root\images\mk-5.png" />
+    <Content Include="Areas\Root\images\mk-6.png" />
+    <Content Include="Areas\Root\images\mk-7.png" />
+    <Content Include="Areas\Root\images\mk-8.png" />
+    <Content Include="Areas\Root\images\mk-9.png" />
+    <Content Include="Areas\Root\images\people-1.png" />
+    <Content Include="Areas\Root\images\phone-1.png" />
+    <Content Include="Areas\Root\images\phone-2.png" />
+    <Content Include="Areas\Root\images\phone-3.png" />
+    <Content Include="Areas\Root\images\phone-4.png" />
+    <Content Include="Areas\Root\images\users\user-11.jpg" />
+    <Content Include="Areas\Root\images\users\user-12.jpg" />
+    <Content Include="Areas\Root\images\users\user-13.jpg" />
+    <Content Include="Areas\Root\images\users\user-14.jpg" />
+    <Content Include="Areas\Root\images\users\user-15.jpg" />
+    <Content Include="Areas\Root\images\users\user-16.jpg" />
+    <Content Include="Areas\Root\images\users\user-17.jpg" />
+    <Content Include="Areas\Root\images\users\user-18.jpg" />
+    <Content Include="Areas\Root\images\users\user-2.jpg" />
+    <Content Include="Areas\Root\images\users\user-3.jpg" />
+    <Content Include="Areas\Root\images\users\user-4.jpg" />
+    <Content Include="Areas\Root\images\users\user-5.jpg" />
+    <Content Include="Areas\Root\images\users\user-6.jpg" />
+    <Content Include="Areas\Root\images\users\user-7.jpg" />
+    <Content Include="Areas\Root\images\users\user-8.jpg" />
+    <Content Include="Areas\Root\images\users\user-9.jpg" />
+    <Content Include="Areas\Root\images\video-poster.jpg" />
+    <Content Include="Areas\Root\sidebar\sidebar.js" />
+    <Content Include="Areas\Root\skin.css" />
+    <Content Include="Areas\Root\www.framework-y.com\images\large\large_wide_1.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\large\large_wide_2.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\large\large_wide_3.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\large\large_wide_4.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\large\large_wide_5.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\lightbox-thumb.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumb-large.png" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumbs\thumb_wide_1.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumbs\thumb_wide_2.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumbs\thumb_wide_3.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumbs\thumb_wide_4.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumbs\thumb_wide_5.jpg" />
+    <Content Include="Areas\Root\www.framework-y.com\images\thumbs\thumb_wide_6.jpg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\fonts\flexslider-icon.eot" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\fonts\flexslider-icon.ttf" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\fonts\flexslider-icon.woff" />
+    <Content Include="Areas\Root\HTWF\scripts\flexslider\fonts\flexslider-icond41d.eot" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Signflow.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\IndexMain.cshtml" />
+    <Content Include="Views\Account\IndexFreelancer.cshtml" />
+    <Content Include="Views\Account\IndexIntro.cshtml" />
+    <Content Include="Views\Account\IndexApplication.cshtml" />
+    <Content Include="Views\Account\IndexMobile.cshtml" />
+    <Content Include="Views\Account\IndexFullpage.cshtml" />
+    <Content Include="Views\Account\IndexCooworking.cshtml" />
+    <Content Include="Views\Account\IndexVideo.cshtml" />
+    <Content Include="Views\Account\IndexBusiness.cshtml" />
+    <Content Include="Views\Account\AboutUsOne.cshtml" />
+    <Content Include="Views\Account\AboutUsTwo.cshtml" />
+    <Content Include="Views\Account\AboutUsThree.cshtml" />
+    <Content Include="Views\Account\AboutUsFour.cshtml" />
+    <Content Include="Views\Account\ServiceOne.cshtml" />
+    <Content Include="Views\Account\ServiceTwo.cshtml" />
+    <Content Include="Views\Account\ServiceThree.cshtml" />
+    <Content Include="Views\Account\ServiceFour.cshtml" />
+    <Content Include="Views\Account\ContactOne.cshtml" />
+    <Content Include="Views\Account\ContactTwo.cshtml" />
+    <Content Include="Views\Account\ContactThree.cshtml" />
+    <Content Include="Views\Account\ContactFour.cshtml" />
+    <Content Include="Views\Account\Pricing.cshtml" />
+    <Content Include="Views\Account\Faq.cshtml" />
+    <Content Include="Views\Account\Team.cshtml" />
+    <Content Include="Views\Account\TeamTwo.cshtml" />
+    <Content Include="Views\Account\Videos.cshtml" />
+    <Content Include="Views\Port\PortOneGutted.cshtml" />
+    <Content Include="Views\Port\SinglePortFive.cshtml" />
+    <Content Include="Views\Port\SinglePortFour.cshtml" />
+    <Content Include="Views\Port\SinglePortThree.cshtml" />
+    <Content Include="Views\Port\SinglePortTwo.cshtml" />
+    <Content Include="Views\Port\SinglePortOne.cshtml" />
+    <Content Include="Views\Port\PortFive.cshtml" />
+    <Content Include="Views\Port\PortFour.cshtml" />
+    <Content Include="Views\Port\PortThree.cshtml" />
+    <Content Include="Views\Port\PortTwoGuttedInverse.cshtml" />
+    <Content Include="Views\Port\PortTwoGutted.cshtml" />
+    <Content Include="Views\Port\PortOneGuttedInverse.cshtml" />
+    <Content Include="Views\Port\SinglePostThree.cshtml" />
+    <Content Include="Views\Port\SinglePostTwo.cshtml" />
+    <Content Include="Views\Port\SinglePostOne.cshtml" />
+    <Content Include="Views\Port\Minimal.cshtml" />
+    <Content Include="Views\Port\Social.cshtml" />
+    <Content Include="Views\Port\Grid.cshtml" />
+    <Content Include="Views\Component\ContactForm.cshtml" />
+    <Content Include="Views\Component\AdvancedTable.cshtml" />
+    <Content Include="Views\Component\GoogleMaps.cshtml" />
+    <Content Include="Views\Component\Timeline.cshtml" />
+    <Content Include="Views\Component\CircleProgress.cshtml" />
+    <Content Include="Views\Component\ProgressBars.cshtml" />
+    <Content Include="Views\Component\Countdown.cshtml" />
+    <Content Include="Views\Component\Counters.cshtml" />
+    <Content Include="Views\Component\Icons.cshtml" />
+    <Content Include="Views\Component\Masonry.cshtml" />
+    <Content Include="Views\Component\Grid.cshtml" />
+    <Content Include="Views\Component\Typography.cshtml" />
+    <Content Include="Views\Component\Lists.cshtml" />
+    <Content Include="Views\Component\SocialMedia.cshtml" />
+    <Content Include="Views\Component\ContentBox.cshtml" />
+    <Content Include="Views\Component\AdvImageBox.cshtml" />
+    <Content Include="Views\Component\ImageBoxes.cshtml" />
+    <Content Include="Views\Component\Button.cshtml" />
+    <Content Include="Views\Component\LightBox.cshtml" />
+    <Content Include="Views\Component\FooterBase.cshtml" />
+    <Content Include="Views\Component\FooterMinimul.cshtml" />
+    <Content Include="Views\Component\FotterParallex.cshtml" />
+    <Content Include="Views\Component\According.cshtml" />
+    <Content Include="Views\Component\Tabs.cshtml" />
+    <Content Include="Views\Component\CollapseBox.cshtml" />
+    <Content Include="Views\Component\ScrollBox.cshtml" />
+    <Content Include="Views\Component\SlidersAndCarousels.cshtml" />
+    <Content Include="Views\Component\BackgroundImage.cshtml" />
+    <Content Include="Views\Component\BgAnimationsParallex.cshtml" />
+    <Content Include="Views\Component\BgAnimations.cshtml" />
+    <Content Include="Views\Component\BackgroundVideo.cshtml" />
+    <Content Include="Views\Component\Slider.cshtml" />
+    <Content Include="Views\Component\BackgroundParallex.cshtml" />
+    <Content Include="Views\Header\MenuSubTitle.cshtml" />
+    <Content Include="Views\Header\MenuSubLine.cshtml" />
+    <Content Include="Views\Header\MenuBigLogo.cshtml" />
+    <Content Include="Views\Header\MenuClassicTransparent.cshtml" />
+    <Content Include="Views\Header\MenuClassic.cshtml" />
+    <Content Include="Views\Titles\ImageBackground.cshtml" />
+    <Content Include="Views\Titles\ImageFullScreen.cshtml" />
+    <Content Include="Views\Titles\ImageFullParallex.cshtml" />
+    <Content Include="Views\Titles\ImageParallex.cshtml" />
+    <Content Include="Views\Titles\ImageParKenBurn.cshtml" />
+    <Content Include="Views\Titles\VideoBackMP4.cshtml" />
+    <Content Include="Views\Titles\VideoBackYouTube.cshtml" />
+    <Content Include="Views\Titles\VideoFullScreen.cshtml" />
+    <Content Include="Views\Titles\VideoFullParallex.cshtml" />
+    <Content Include="Views\Titles\VideoParallex.cshtml" />
+    <Content Include="Views\Titles\TitleBaseOne.cshtml" />
+    <Content Include="Views\Titles\TitleBaseTwo.cshtml" />
+    <Content Include="Views\Titles\AnimationBackground.cshtml" />
+    <Content Include="Views\Titles\AnimationParallex.cshtml" />
+    <Content Include="Views\Titles\SliderBackground.cshtml" />
+    <Content Include="Views\Titles\SliderFullScreen.cshtml" />
+    <Content Include="Views\Titles\SliderFullParallex.cshtml" />
+    <Content Include="Views\Titles\SliderParallex.cshtml" />
+    <Content Include="Views\Header\MenuMiddleLogo.cshtml" />
+    <Content Include="Views\Header\MenuMiddleLogoTop.cshtml" />
+    <Content Include="Views\Header\MenuMiddleBox.cshtml" />
+    <Content Include="Views\Header\MenuIcons.cshtml" />
+    <Content Include="Views\Header\MenuIconsTop.cshtml" />
+    <Content Include="Views\Header\SideClassic.cshtml" />
+    <Content Include="Views\Header\SideLateral.cshtml" />
+    <Content Include="Views\Header\SideSimple.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Root\features\containers\www.youtube.com\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51263</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44316/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

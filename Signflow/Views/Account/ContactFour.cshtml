@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "ContactFour";
+    Layout = "~/Views/Shared/_Signflow.cshtml";
+}
+
+    <meta name="description" content="Contacts page classic with contact form in HTML.">
+  
+<body class="contacts">
+    
+    <div class="section-map box-middle-container row-22">
+        <div class="google-map" data-coords="41.741895,-72.789308" data-zoom="12" data-skin="" data-marker-pos="col-md-6-right" data-marker-top="50" data-marker="http://templates.framework-y.com/signflow/images/marker-map.png"></div>
+        <div class="overlaybox overlaybox-side">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 overlaybox-inner box-middle">
+                        <h2>Collins 10085,<br /> San Francisco, USA</h2>
+                        <hr class="space m">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa fa-home"></i>London, United Kingdom</li>
+                                    <li><i class="fa-li fa fa-headphones"></i> (123) 0 123 455669</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa-skype fa"></i> Company.name</li>
+                                    <li><i class="fa-li fa fa-envelope"></i> info@business.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="space l" />
+                        <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax" method="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input id="name" name="name" placeholder="name" type="text" class="form-control form-value" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input id="email" name="email" placeholder="email" type="email" class="form-control form-value" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input id="phone" name="phone" placeholder="phone" type="text" class="form-control form-value">
+                                </div>
+                            </div>
+                            <hr class="space xs" />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea id="messagge" name="messagge" placeholder="messagge" class="form-control form-value" required></textarea>
+                                    <hr class="space s" />
+                                    <button class="circle-button btn-sm btn" type="submit">Send messagge</button>
+                                </div>
+                            </div>
+                            <div class="success-box">
+                                <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
+                            </div>
+                            <div class="error-box">
+                                <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<!-- Mirrored from templates.framework-y.com/signflow/pages/contacts-4.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 10 Oct 2020 09:10:22 GMT -->
+
+
+

@@ -1,0 +1,392 @@
+﻿
+@{
+    ViewBag.Title = "IndexFullpage";
+    Layout = "~/Views/Shared/_Signflow.cshtml";
+}
+ 
+<body>
+  
+    <nav id="fullpage-menu" class="fullpage-menu menu-dots">
+        <ul>
+            <li><a data-toggle="tooltip" data-placement="left" title="Home"></a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Contacts"></a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Map"></a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Services"></a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Mobile"></a></li>
+        </ul>
+    </nav>
+
+    <div id="fullpage-main">
+
+        <div class="section overlay-container">
+            <div class="background-page overlay-container" style="background-image: url('~/Areas/Root/images/hd-4.jpg');"> </div>
+            <div class="container content box-middle">
+                <div class="row vertical-row " data-anima="fade-in" data-time="2000">
+                    <div class="col-md-6 col-sm-12 text-center-sm">
+                        <h1 class="text-color">Start here your</h1>
+                        <h1>Jurney inside the entreprenurs and startup world</h1>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-center-sm">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
+                            Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate velit esse cillumo.
+                        </p>
+                        <hr class="space m" />
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="icon-box icon-box-top-bottom">
+                                    <div class="icon-box-cell">
+                                        <i class="fa fa-adjust text-l"></i>
+                                    </div>
+                                    <div class="icon-box-cell">
+                                        <label class="text-m">Free demo</label>
+                                        <p class="text-s">Lorem ipsum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box icon-box-top-bottom">
+                                    <div class="icon-box-cell">
+                                        <i class="fa fa-coffee text-l"></i>
+                                    </div>
+                                    <div class="icon-box-cell">
+                                        <label class="text-m">Great office</label>
+                                        <p class="text-s">Lorem ipsum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box icon-box-top-bottom">
+                                    <div class="icon-box-cell">
+                                        <i class="fa fa-support text-l"></i>
+                                    </div>
+                                    <div class="icon-box-cell">
+                                        <label class="text-m">Support</label>
+                                        <p class="text-s">Lorem ipsum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section overlay-container">
+            <div class="background-page overlay-container" style="background-image: url('~/Areas/Root/images/hd-6.jpg');"> </div>
+            <div class="container content box-middle">
+                <div class="row proporzional-row">
+                    <div class="col-md-5 boxed-inverse shadow-1">
+                        <h2>Contact us now</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed do.</p>
+                        <hr class="space m" />
+                        <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax" method="post" data-email="federico@pixor.it">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="name" name="name" placeholder="name" type="text" class="form-control form-value" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input id="email" name="email" placeholder="email" type="email" class="form-control form-value" required>
+                                </div>
+                            </div>
+                            <hr class="space xs" />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea id="messagge" name="messagge" placeholder="Write your message" class="form-control form-value" required></textarea>
+                                    <hr class="space s" />
+                                    <button class="btn-sm btn btn-border circle-button" type="submit"><i class="fa fa-envelope-o"></i>Send messagge</button>
+                                </div>
+                            </div>
+                            <div class="success-box">
+                                <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
+                            </div>
+                            <div class="error-box">
+                                <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="google-map" data-marker="http://templates.framework-y.com/signflow/images/marker-map.png" data-coords="40.7127753,-73.989308"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section overlay-container">
+            <div class="background-page overlay-container" style="background-image: url('~/Areas/Root/images/hd-5.jpg');"> </div>
+            <div class="container content box-middle">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <h1>Crazy team</h1>
+                        <p>
+                            Lamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate velit esse cillum dol.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <table class="grid-table grid-table-xs-12">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="icon-box counter-box-icon">
+                                            <div class="icon-box-cell">
+                                                <i class="fa fa-circle-o text-xl"></i>
+                                            </div>
+                                            <div class="icon-box-cell">
+                                                <label class="counter text-l" data-speed="2000" data-to="100">100</label>
+                                                <p class="text-s">Members</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="icon-box counter-box-icon">
+                                            <div class="icon-box-cell">
+                                                <i class="fa fa-circle-o text-xl"></i>
+                                            </div>
+                                            <div class="icon-box-cell">
+                                                <label class="counter text-l" data-speed="2000" data-to="350">350</label>
+                                                <p class="text-s">Collaborators</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="icon-box counter-box-icon ">
+                                            <div class="icon-box-cell">
+                                                <i class="fa fa-circle-o text-xl"></i>
+                                            </div>
+                                            <div class="icon-box-cell">
+                                                <label class="counter text-l" data-speed="2000" data-to="100">120</label>
+                                                <p class="text-s">Offices</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <hr class="space" />
+                <div class="flexslider carousel outer-navs" data-options="minWidth:200,itemMargin:15,numItems:3,controlNav:false,directionNav:true">
+                    <ul class="slides">
+                        <li>
+                            <a class="img-box lightbox shadow-1" href="~/Areas/Root/images/gallery/image-1.jpg" data-lightbox-anima="fade-right">
+                                <img src="~/Areas/Root/images/gallery/image-1.jpg" alt="">
+                            </a>
+                            <hr class="space s" />
+                            <p class="text-color text-s">Lore sito ameto consecteture.</p>
+                            <p class="text-normal text-xs">Lorem ipsum dolor sit amet consecteture.</p>
+                        </li>
+                        <li>
+                            <a class="img-box lightbox shadow-1" href="~/Areas/Root/images/gallery/image-2.jpg" data-lightbox-anima="fade-right">
+                                <img src="~/Areas/Root/images/gallery/image-2.jpg" alt="">
+                            </a>
+                            <hr class="space s" />
+                            <p class="text-color text-s">Lore sito ameto consecteture.</p>
+                            <p class="text-normal text-xs">Lorem ipsum dolor sit amet consecteture.</p>
+                        </li>
+                        <li>
+                            <a class="img-box lightbox shadow-1" href="~/Areas/Root/images/gallery/image-3.jpg" data-lightbox-anima="fade-right">
+                                <img src="~/Areas/Root/images/gallery/image-3.jpg" alt="">
+                            </a>
+                            <hr class="space s" />
+                            <p class="text-color text-s">Lore sito ameto consecteture.</p>
+                            <p class="text-normal text-xs">Lorem ipsum dolor sit amet consecteture.</p>
+                        </li>
+                        <li>
+                            <a class="img-box lightbox shadow-1" href="~/Areas/Root/images/gallery/image-1.jpg" data-lightbox-anima="fade-right">
+                                <img src="~/Areas/Root/images/gallery/image-1.jpg" alt="">
+                            </a>
+                            <hr class="space s" />
+                            <p class="text-color text-s">Lore sito ameto consecteture.</p>
+                            <p class="text-normal text-xs">Lorem ipsum dolor sit amet consecteture.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section overlay-container">
+            <div class="background-page overlay-container" style="background-image: url('~/Areas/Root/images/hd-7.jpg');"> </div>
+            <div class="container content box-middle">
+                <div class="row proporzional-row">
+                    <div class="col-md-4 col-sm-12">
+                        <h2>Primary services</h2>
+                        <hr class="space l" />
+                        <h3 class="text-m">Software</h3>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="90">
+                                <span><span class="counter" data-to="90">90</span> %</span>
+                            </div>
+                        </div>
+                        <hr class="space s" />
+                        <h3 class="text-m">Security</h3>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="75">
+                                <span><span class="counter" data-to="75">75</span> %</span>
+                            </div>
+                        </div>
+                        <hr class="space s" />
+                        <h3 class="text-m">Mobile</h3>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="50">
+                                <span><span class="counter" data-to="50">50</span> %</span>
+                            </div>
+                        </div>
+                        <hr class="space l" />
+                        <a href="#" class="btn btn-sm circle-button">View all services</a>
+                        <hr class="space visible-sm" />
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <div class="tab-box" data-tab-anima="fade-right">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#">Marketing</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Design</a></li>
+                            </ul>
+                            <div class="panel active">
+                                <div class="flexslider carousel" data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:false,directionNav:true">
+                                    <ul class="slides">
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-globe icon circle  text-xl"></i>
+                                                <h3>Web marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-user-plus icon circle  text-xl"></i>
+                                                <h3>Influencers marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-hand-rock-o icon circle  text-xl"></i>
+                                                <h3>Guerrilla marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="flexslider carousel" data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:false,directionNav:true" data-trigger="manual">
+                                    <ul class="slides">
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-globe icon circle  text-xl"></i>
+                                                <h3>Web marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-user-plus icon circle  text-xl"></i>
+                                                <h3>Influencers marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-hand-rock-o icon circle  text-xl"></i>
+                                                <h3>Guerrilla marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="flexslider carousel" data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:false,directionNav:true" data-trigger="manual">
+                                    <ul class="slides">
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-globe icon circle  text-xl"></i>
+                                                <h3>Web marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-user-plus icon circle  text-xl"></i>
+                                                <h3>Influencers marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="advs-box advs-box-top-icon boxed-inverse shadow-1">
+                                                <i class="fa fa-hand-rock-o icon circle  text-xl"></i>
+                                                <h3>Guerrilla marketing</h3>
+                                                <p>
+                                                    Interdum iusto pulvinar consequuntur augue optio repellat fugarus expedita fusce
+                                                    temporibus est odit mioyo.
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section overlay-container">
+            <div class="background-page overlay-container" style="background-image: url('~/Areas/Root/images/hd-3.jpg');"> </div>
+            <div class="container content box-middle">
+                <div class="row vertical-row">
+                    <div class="col-md-5">
+                        <img src="~/Areas/Root/images/mk-11.png" alt="" />
+                    </div>
+                    <div class="col-md-7">
+                        <h1>A powerful application into your pocket</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
+                            Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <hr class="space m" />
+                        <a href="#" class="circle-button btn btn-sm btn-border"><i class="fa fa-android"></i> Download Android</a><span class="space"></span>
+                        <a href="#" class="circle-button btn btn-sm btn-border"><i class="fa fa-apple"></i> Download iOS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    </div>
+
+</body>
+
+<!-- Mirrored from templates.framework-y.com/signflow/pages/index-fullpage.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 10 Oct 2020 09:09:30 GMT -->
+
+
+

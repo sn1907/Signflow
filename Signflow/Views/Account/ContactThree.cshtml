@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "ContactThree";
+    Layout = "~/Views/Shared/_Signflow.cshtml";
+}
+
+    <meta name="description" content="Contacts page classic with contact form in HTML.">
+
+<body class="contacts">
+   
+    <div class="section-two-blocks two-blocks-container blocks-right shadow-1 margin-top-90 margin-bottom-90">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="google-map" data-coords="40.741895,-73.989308" data-skin="" data-zoom="10" data-marker-pos-top="20" data-marker="http://templates.framework-y.com/signflow/images/marker-map.png"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <h4>Send a message</h4>
+
+                    <p>
+                        Potenti inceptos, facilisi, pariatur netus, scelerisque. Porta eum, sapiente, placerat voluptates!
+                        Debitis necessitatibus fugito.
+                    </p>
+                    <hr class="space m" />
+                    <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Name</p>
+                                <input id="name" name="name" placeholder="" type="text" class="form-control form-value" required>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Email</p>
+                                <input id="email" name="email" placeholder="" type="email" class="form-control form-value" required>
+                            </div>
+                        </div>
+                        <hr class="space s" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Messagge</p>
+                                <textarea id="messagge" name="messagge" class="form-control form-value" required></textarea>
+                                <hr class="space s" />
+                                <button class="circle-button btn-sm btn" type="submit"><i class="fa fa-envelope-o"></i>Send messagge</button>
+                            </div>
+                        </div>
+                        <div class="success-box">
+                            <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
+                        </div>
+                        <div class="error-box">
+                            <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<!-- Mirrored from templates.framework-y.com/signflow/pages/contacts-3.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 10 Oct 2020 09:10:22 GMT -->
+
+
+
